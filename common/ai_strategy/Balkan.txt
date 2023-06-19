@@ -1,0 +1,287 @@
+ALB_war_in_MAC = {
+	allowed = {
+		OR = {
+			original_tag = ALB
+			original_tag = KOS
+		}
+	}
+	
+	enable = {
+		MAC = { owns_state = 921 }
+	}
+	
+	abort = {
+		NOT = { country_exists = MAC }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "MAC"
+		value = 100
+	}
+}
+
+Tetovo_love_albans = {
+	allowed = {
+		not = { original_tag = MAC }
+	}
+
+	enable = {
+		owns_state = 921
+		has_war_with = MAC
+	}
+	
+	abort = {
+		not = { country_exists = MAC }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "MAC"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ALB"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "KOS"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GRE"
+		value = 20
+	}
+}
+
+ALB_support_KOS = {
+	allowed = {
+		original_tag = ALB
+	}
+	
+	enable = {
+		country_exists = KOS
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = KOS
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "KOS"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KOS"
+		value = 200
+	}
+}
+
+KOS_support_ALB = {
+	allowed = {
+		original_tag = KOS
+	}
+	
+	enable = {
+		country_exists = ALB
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = ALB
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "ALB"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ALB"
+		value = 200
+	}
+}
+
+SER_support_MNT = {
+	allowed = {
+		original_tag = SER
+	}
+	
+	enable = {
+		country_exists = MNT
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = MNT
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "MNT"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MNT"
+		value = 200
+	}
+}
+
+MNT_support_SER = {
+	allowed = {
+		original_tag = MNT
+	}
+	
+	enable = {
+		country_exists = SER
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = SER
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "SER"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SER"
+		value = 200
+	}
+}
+
+ALB_befriend_KOS = {
+	allowed = {
+		original_tag = ALB
+	}
+	
+	enable = {
+		has_political_power > 155
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = KOS }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = KOS
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "KOS"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "KOS"
+		value = 25
+	}
+}
+
+KOS_befriend_ALB = {
+	allowed = {
+		original_tag = KOS
+	}
+	
+	enable = {
+		has_political_power > 155
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = ALB }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = ALB
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ALB"
+		value = 150
+	}
+}
+
+SER_befriend_MNT = {
+	allowed = {
+		original_tag = SER
+	}
+	
+	enable = {
+		has_political_power > 155
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = MNT }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = MNT
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "MNT"
+		value = 150
+	}
+}
+
+MNT_befriend_SER = {
+	allowed = {
+		original_tag = MNT
+	}
+	
+	enable = {
+		has_political_power > 155
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = SER }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = SER
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SER"
+		value = 150
+	}
+}

@@ -1,0 +1,131 @@
+ODKB = {
+	enable = {
+		has_idea = ODKB_member
+	}
+	
+	abort = {
+		has_offensive_war = yes
+	}
+	
+	ai_strategy = {
+		type = befriend
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		target = PREV		
+		value = 600
+	}
+	ai_strategy = {
+		type = support
+		target = PREV		
+		value = 600
+	}
+	ai_strategy = {
+		type = protect
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = alliance
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		target = PREV
+		target = guarantee
+		value = 600
+	}
+}
+
+no_one_will_die_for_Armenia = {
+	allowed = {
+		has_idea = ODKB_member
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+		date > 2024.01.01
+	}
+	
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = ARM
+		value = 200
+	}
+}
+
+ODKB_not_love_USA = {
+	allowed = {
+		has_idea = ODKB_member
+	}
+	
+	enable = {
+		USA = { has_idea = NATO_member }
+	}
+	
+	abort = {
+		NOT = { USA = { has_idea = NATO_member } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "USA"
+		value = -250
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "USA"
+		value = -250
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = -250
+	}
+}
+
+ODKB_not_love_POL = {
+	allowed = {
+		has_idea = ODKB_member
+	}
+	
+	enable = {
+		POL = { has_idea = NATO_member }
+	}
+	
+	abort = {
+		NOT = { POL = { has_idea = NATO_member } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "POL"
+		value = -250
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "POL"
+		value = -250
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "POL"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "POL"
+		value = -250
+	}
+}

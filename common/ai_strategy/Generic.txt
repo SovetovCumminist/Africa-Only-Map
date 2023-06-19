@@ -1,0 +1,617 @@
+AI_wants_civ = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		threat < 0.45
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+AI_no_wants_mil = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		ROOT_is_democratic_regime = yes
+		threat < 0.35
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = -50
+	}
+}
+
+AI_wants_def = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_war = yes
+		is_major = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = bunker
+		value = 50
+	}
+}
+
+AI_wants_mil = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		threat > 0.45
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+AI_wants_invest = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_country_flag = allow_investitions
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 25
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -25
+	}
+}
+
+AI_wants_save_pp = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_political_power < 50
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -200
+	}
+}
+
+AI_wants_save_eu = {
+	allowed = {
+		has_idea = EU_member
+	}
+	enable = {
+		threat > 0.50
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = camelry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armored_car
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = modern_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 500
+	}
+}
+
+AI_wants_save_nato = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	enable = {
+		threat > 0.40
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = camelry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armored_car
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = modern_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 500
+	}
+}
+
+AI_wants_save_odkb = {
+	allowed = {
+		has_idea = ODKB_member
+	}
+	enable = {
+		threat > 0.30
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = camelry
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armored_car
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = modern_armor
+		value = 500
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 500
+	}
+}
+
+AI_base_division_limit = {
+	enable = {
+		or = {
+			and = {
+				is_major = yes
+				num_divisions > 96
+			}
+			and = {
+				is_major = no
+				num_divisions > 48
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = camelry
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = armored_car
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = modern_armor
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = -300
+	}
+}
+
+AI_base_division_limit = {
+	allowed = {
+		have_so_more_div = yes
+	}
+	enable = {
+		NOT = { num_divisions < 8 }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = camelry
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = armored_car
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = modern_armor
+		value = -2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = -2000
+	}
+}
+
+Modern_template_design = {
+	enable = {
+		or = {
+			num_of_military_factories > 15
+			is_major = yes
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -200
+	}
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 150
+	}
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 50
+	}
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 50
+	}
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 150
+	}
+}

@@ -1,0 +1,61 @@
+BLR_nationalist_war = {
+	allowed = {
+		original_tag = BLR
+	}
+
+	enable = {
+		ROOT_is_fascism_regime = yes
+		UKR = { has_war_with = RUS }
+	}
+	
+	abort = {
+		NOT = { country_exists = UKR }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UKR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "UKR"
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKR"
+		value = 300
+	}
+}
+
+BLR_nationalist_war_uks = {
+	allowed = {
+		original_tag = BLR
+	}
+
+	enable = {
+		ROOT_is_fascism_regime = yes
+		UKS = { has_war_with = RUS }
+	}
+	
+	abort = {
+		NOT = { country_exists = UKS }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UKS"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "UKS"
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKS"
+		value = 300
+	}
+}

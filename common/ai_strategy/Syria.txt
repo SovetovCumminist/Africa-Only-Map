@@ -1,0 +1,337 @@
+NATO = {
+	allowed = { has_idea = NATO_member is_major = yes }
+	
+	enable = {
+		DSY = { has_war_with = SYR }
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = DSY
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "DSY"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "KUR"
+		value = 50
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KUR"
+		value = 50
+	}
+}
+
+NATO_minors = {
+	allowed = { has_idea = NATO_member is_major = no }
+	
+	enable = {
+		DSY = { has_war_with = SYR }
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = DSY
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "DSY"
+		value = 50
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"
+		value = 5
+	}
+	ai_strategy = {
+		type = support
+		id = "KUR"
+		value = 30
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KUR"
+		value = 1
+	}
+}
+
+NATO_befriend = {
+	allowed = { has_idea = NATO_member }
+	
+	enable = {
+		has_political_power > 155
+		DSY = { has_war_with = SYR }
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = DSY }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = DSY
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "DSY"
+		value = 50
+	}
+	ai_strategy = {
+		type = befriend
+		id = "KUR"
+		value = 5
+	}
+}
+
+ODKB = {
+	allowed = { has_idea = ODKB_member }
+	
+	enable = {
+		SYR = { has_war_with = DSY }
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = SYR
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "SYR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SYR"
+		value = 200
+	}
+}
+
+ODKB_befriend = {
+	allowed = { has_idea = ODKB_member }
+	
+	enable = {
+		has_political_power > 155
+		SYR = { has_war_with = DSY }
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = SYR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = SYR
+					value > 90
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SYR"
+		value = 200
+	}
+}
+
+Turkey_Syria = {
+	allowed = {
+		original_tag = TUR
+	}
+	
+	enable = {
+		country_exists = KUR
+	}
+	
+	abort = {
+		NOT = { country_exists = KUR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KUR"
+		value = 150
+	}
+	ai_strategy = {
+		type = support
+		id = "DSY"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"
+		value = 200
+	}
+}
+
+Turkey_Syria_befriend = {
+	allowed = {
+		original_tag = TUR
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = KUR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = DSY }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = DSY
+					value > 90
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "DSY"
+		value = 200
+	}
+}
+
+Anti-IGIL = {
+	allowed = {
+		NOT = { original_tag = SAU }
+	}
+	
+	enable = {
+		IGI = { has_government = reactionism }
+	}
+	
+	abort = {
+		NOT = {
+			IGI = { has_government = reactionism }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "IGI"
+		value = 150
+	}
+}
+
+IGIL_1 = {
+	allowed = {
+		original_tag = IGI
+	}
+	
+	enable = {
+		has_war = no
+	}
+	
+	abort = {
+		NOT = {
+			IGI = { has_government = reactionism }
+		}
+	}
+	
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 60
+	}
+}
+
+IGIL_2 = {
+	allowed = {
+		original_tag = IGI
+	}
+	
+	enable = {
+		has_war = yes
+	}
+	
+	abort = {
+		NOT = {
+			IGI = { has_government = reactionism }
+		}
+	}
+	
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -60
+	}
+}
+
+SAUDY = {
+	allowed = {
+		original_tag = SAU
+	}
+	
+	enable = {
+		country_exists = IGI
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = DSY }
+			NOT = { country_exists = IGI }
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "DSY"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"
+		value = 150
+	}
+}
+
+SAUDY_befriend = {
+	allowed = {
+		original_tag = SAU
+	}
+
+	enable = {
+		has_political_power > 155
+		country_exists = DSY
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = DSY }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = DSY
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "DSY"
+		value = 100
+	}
+}

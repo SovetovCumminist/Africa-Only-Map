@@ -1,0 +1,193 @@
+CAR = {
+	allowed = {
+		original_tag = CAR
+	}
+	
+	enable = {
+		country_exists = SLK
+	}
+	
+	abort = {
+		NOT = { country_exists = SLK }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SLK"
+		value = 250
+	}
+	ai_strategy = {
+		type = support
+		id = "FRA"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "FRA"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SLK"
+		value = 25
+	}
+}
+
+CAR_befriend = {
+	allowed = {
+		or = {
+			original_tag = FRA
+			has_idea = FRA_Zone_Franc_member
+		}
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = CAR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = CAR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = CAR
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "CAR"
+		value = 100
+	}
+}
+
+CAR_support = {
+	allowed = {
+		or = {
+			original_tag = FRA
+			has_idea = FRA_Zone_Franc_member
+		}
+	}
+	
+	enable = {
+		country_exists = SLK
+	}
+	
+	abort = {
+		NOT = { country_exists = SLK }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SLK"
+		value = 250
+	}
+	ai_strategy = {
+		type = support
+		id = "CAR"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CAR"
+		value = 200
+	}
+}
+
+SLK = {
+	allowed = {
+		original_tag = SLK
+	}
+	
+	enable = {
+		country_exists = CAR
+	}
+	
+	abort = {
+		NOT = { country_exists = CAR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CAR"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "CAR"
+		value = 25
+	}
+}
+
+Seleka_befriend = {
+	allowed = {
+		or = {
+			original_tag = CHA
+			original_tag = SUD
+			original_tag = SAU
+		}
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = SLK
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = SLK }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = SLK
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SLK"
+		value = 100
+	}
+}
+
+Seleka_support = {
+	allowed = {
+		or = {
+			original_tag = CHA
+			original_tag = SUD
+			original_tag = SAU
+		}
+	}
+	
+	enable = {
+		country_exists = SLK
+	}
+	
+	abort = {
+		NOT = { country_exists = SLK }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CAR"
+		value = 250
+	}
+	ai_strategy = {
+		type = support
+		id = "SLK"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SLK"
+		value = 200
+	}
+}

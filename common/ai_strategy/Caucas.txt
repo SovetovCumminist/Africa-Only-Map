@@ -1,0 +1,391 @@
+AZR_war_NKR = {
+	allowed = {
+		original_tag = AZR
+	}
+	
+	enable = {
+		or = {
+			date > 2020.5.1
+			is_historical_focus_on = yes
+		}
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = NKR
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "NKR"
+		value = 150
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ARM"
+		value = 25
+	}
+}
+
+AZR_war_NKR = {
+	allowed = {
+		original_tag = AZR
+	}
+	
+	enable = {
+		or = {
+			date < 2020.5.1
+			is_historical_focus_on = yes
+		}
+	}
+	
+	abort = {
+		date > 2020.5.1
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "NKR"
+		value = -15000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ARM"
+		value = -25000
+	}
+}
+
+AZR_ally = {
+	allowed = {
+		original_tag = AZR
+	}
+	
+	enable = {
+		NKR = { is_puppet_of = ARM }
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = NKR
+		}
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "TUR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "TUR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GEO"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "GEO"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NKR"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ARM"
+		value = 100
+	}
+}
+
+AZR_ally_befriend = {
+	allowed = {
+		original_tag = AZR
+	}
+	
+	enable = {
+		has_political_power > 155
+		NKR = { is_puppet_of = ARM }
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = NKR }
+			has_political_power < 25
+			and = {
+				ROOT = {
+					has_opinion	= {
+						target = GEO
+						value > 75
+					}
+				}
+				ROOT = {
+					has_opinion	= {
+						target = TUR
+						value > 75
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GEO"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "TUR"
+		value = 100
+	}
+}
+
+ARM_ally = {
+	allowed = {
+		original_tag = ARM
+	}
+	
+	enable = {
+		country_exists = NKR
+	}
+	
+	abort = {
+		NOT = { country_exists = NKR }
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "NKR"
+		target = guarantee
+		value = 20
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "AZR"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NKR"
+		value = 5
+	}
+	ai_strategy = {
+		type = support
+		id = "NKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NKR"
+		value = 200
+	}
+}
+
+NKR_ally = {
+	allowed = {
+		original_tag = NKR
+	}
+	
+	enable = {
+		country_exists = ARM
+	}
+	
+	abort = {
+		NOT = { country_exists = ARM }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "AZR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "ARM"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ARM"
+		value = 200
+	}
+}
+
+NKR_ally_befriend = {
+	allowed = {
+		original_tag = NKR
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = ARM
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = ARM }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = ARM
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ARM"
+		value = 100
+	}
+}
+
+TUR_ally = {
+	allowed = {
+		original_tag = TUR
+	}
+	
+	enable = {
+		country_exists = AZR
+	}
+	
+	abort = {
+		NOT = { country_exists = AZR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ARM"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NKR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "AZR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AZR"
+		value = 200
+	}
+}
+
+TUR_ally_befriend = {
+	allowed = {
+		original_tag = TUR
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = AZR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = AZR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = AZR
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "AZR"
+		value = 150
+	}
+}
+
+Russia_ally = {
+	allowed = {
+		original_tag = RUS
+	}
+	
+	enable = {
+		country_exists = ARM
+	}
+	
+	abort = {
+		NOT = { country_exists = ARM }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "ARM"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ARM"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "NKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NKR"
+		value = 200
+	}
+}
+
+Russia_ally_befriend = {
+	allowed = {
+		original_tag = RUS
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = ARM
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = ARM }
+			has_political_power < 35
+			and = {
+				ROOT = {
+					has_opinion	= {
+						target = ARM
+						value > 80
+					}
+				}
+				ROOT = {
+					has_opinion	= {
+						target = NKR
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ARM"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NKR"
+		value = 100
+	}
+}

@@ -1,0 +1,288 @@
+Xarakada = {
+	allowed = {
+		or = {
+			original_tag = SML
+			original_tag = ERI
+		}
+	}
+	
+	enable = {
+		HRK = { has_government = reactionism }
+	}
+	
+	abort = {
+		NOT = { country_exists = HRK }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "HRK"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HRK"
+		value = 200
+	}
+}
+
+African_Union_Mission_in_Somalia = {
+	allowed = {
+		original_tag = UGA
+		original_tag = KEN
+		original_tag = BRD
+		original_tag = SIE
+		original_tag = ETH
+		original_tag = GHA
+		original_tag = NGA
+		original_tag = CMR
+		original_tag = MLI
+		original_tag = SEN
+		original_tag = ZAM
+	}
+	
+	enable = {
+		country_exists = HRK
+	}
+	
+	abort = {
+		NOT = { country_exists = HRK }
+	}
+	
+	#Отправили военные контингенты
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UGA"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KEN"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "BRD"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SIE"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ETH"
+		value = 200
+	}
+	#Отправили советников и гражданский персонал
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GHA"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "NGA"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CMR"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "MLI"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SEN"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "ZAM"
+		value = 200
+	}
+}
+
+ETH_SOM = {
+	allowed = {
+		original_tag = ETH
+	}
+	
+	enable = {
+		country_exists = SOM
+	}
+	
+	abort = {
+		NOT = { country_exists = SOM }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "SOM"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SOM"
+		value = 50
+	}
+}
+
+ETH_SOM_befriend = {
+	allowed = {
+		original_tag = ETH
+	}
+	
+	enable = {
+		has_political_power > 155
+	}
+	
+	abort = {
+		or = {
+			date > 2016.1.1
+			NOT = { country_exists = SOM }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = SOM
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SOM"
+		value = 200
+	}
+}
+
+SOM_war_ETH = {
+	allowed = {
+		original_tag = SOM
+	}
+	
+	enable = {
+		ROOT_is_fascism_regime = yes
+	}
+	
+	abort = {
+		NOT = { country_exists = ETH }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ETH"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ETH"
+		value = 150
+	}
+}
+
+SOM_war_KEN = {
+	allowed = {
+		original_tag = SOM
+	}
+	
+	enable = {
+		ROOT_is_fascism_regime = yes
+	}
+	
+	abort = {
+		NOT = { country_exists = KEN }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KEN"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KEN"
+		value = 150
+	}
+}
+
+SOM_war_SML = {
+	allowed = {
+		original_tag = SOM
+	}
+	
+	enable = {
+		country_exists = SML
+	}
+	
+	abort = {
+		NOT = { country_exists = SML }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SML"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SML"
+		value = 150
+	}
+}
+
+SML_antagonize_SOM = {
+	allowed = {
+		original_tag = SML
+	}
+	
+	enable = {
+		country_exists = SOM
+	}
+	
+	abort = {
+		NOT = { country_exists = SOM }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SOM"
+		value = 250
+	}
+}
+
+SML_PUN_SOM_war_HAT = {
+	allowed = {
+		or = {
+			original_tag = SML
+			original_tag = PUN
+			original_tag = SOM
+		}
+	}
+	
+	enable = {
+		country_exists = HAT
+	}
+	
+	abort = {
+		NOT = { country_exists = HAT }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "HAT"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "HAT"
+		value = 200
+	}
+}

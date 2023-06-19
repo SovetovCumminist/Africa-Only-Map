@@ -1,0 +1,233 @@
+#stop_not_planned_wars = {
+#	allowed = {
+#		always = yes
+#	}
+#
+#	enable = {
+#		is_historical_focus_on = yes
+#		#date < 2024.1.1
+#	}
+#	
+#	abort = {
+#		date > 2024.1.1
+#	}
+#	
+#	ai_strategy = {
+#		type = declare_war
+#		value = -10000
+#	}
+#
+#	ai_strategy = {
+#		type = ignore_claim
+#		value = 10000
+#	}
+#}
+
+#Специальная военная операция на Украине 2022.2.24
+rus_stop_not_planned_wars = {
+	allowed = {
+		original_tag = RUS
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		#date < 2022.1.1
+	}
+	
+	abort = {
+		date > 2022.1.1
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "UKR"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "UKR"
+		value = 10000
+	}
+}
+
+ukr_stop_not_planned_wars = {
+	allowed = {
+		original_tag = UKR
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		#date < 2024.1.1
+	}
+	
+	abort = {
+		date > 2024.1.1
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RUS"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "RUS"
+		value = 10000
+	}
+}
+
+#Вторая карабахская война 2020.9.27
+azr_stop_not_planned_wars = {
+	allowed = {
+		original_tag = AZR
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		#date < 2020.8.1
+	}
+	
+	abort = {
+		date > 2020.8.1
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "ARM"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "ARM"
+		value = 10000
+	}
+}
+
+prc_stop_not_planned_wars = {
+	allowed = {
+		original_tag = PRC
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		#date < 2024.1.1
+	}
+	
+	abort = {
+		date > 2024.1.1
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RUS"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "RUS"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "CHI"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "CHI"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RAJ"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "RAJ"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "PAK"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "PAK"
+		value = 10000
+	}
+}
+
+chi_stop_not_planned_wars = {
+	allowed = {
+		original_tag = CHI
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		#date < 2024.1.1
+	}
+	
+	abort = {
+		date > 2024.1.1
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RUS"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "RUS"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "PRC"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "PRC"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RAJ"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "RAJ"
+		value = 10000
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "PAK"
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "PAK"
+		value = 10000
+	}
+}

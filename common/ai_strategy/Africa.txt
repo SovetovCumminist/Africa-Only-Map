@@ -1,0 +1,124 @@
+SUD_war_EGY = {
+	allowed = {
+		original_tag = SUD
+	}
+	
+	enable = {
+		EGY = { owns_state = 924 }
+	}
+	
+	abort = {
+		SUD = { owns_state = 924 }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "EGY"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "EGY"
+		value = 50
+	}
+}
+
+EGY_war_SUD = {
+	allowed = {
+		original_tag = EGY
+	}
+	
+	enable = {
+		ROOT_is_fascism_regime = yes
+	}
+	
+	abort = {
+		NOT = { country_exists = SUD }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SUD"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SUD"
+		value = 150
+	}
+}
+
+EGY_war_SSU = {
+	allowed = {
+		original_tag = EGY
+	}
+	
+	enable = {
+		ROOT_is_fascism_regime = yes
+	}
+	
+	abort = {
+		NOT = { country_exists = SSU }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SSU"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SSU"
+		value = 150
+	}
+}
+
+SUD_war_SSU = {
+	allowed = {
+		original_tag = SUD
+	}
+	
+	enable = {
+		ROOT_is_fascism_regime = yes
+	}
+	
+	abort = {
+		NOT = { country_exists = SSU }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SSU"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SSU"
+		value = 150
+	}
+}
+
+MOR_war_WES = {
+	allowed = {
+		original_tag = MOR
+	}
+	
+	enable = {
+		country_exists = WES
+	}
+	
+	abort = {
+		NOT = { country_exists = WES }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "WES"
+		value = 250
+	}
+	ai_strategy = {
+		type = conquer
+		id = "WES"
+		value = 50
+	}
+}

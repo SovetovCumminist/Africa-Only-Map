@@ -1,0 +1,162 @@
+Korea_Republic = {
+	allowed = {
+		original_tag = KPR
+	}
+	
+	enable = {
+		country_exists = KOR
+	}
+	
+	abort = {
+		NOT = { country_exists = KOR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KOR"
+		value = 250
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "PRC"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PRC"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KOR"
+		value = 25
+	}
+}
+
+Korea_Republic_befriend = {
+	allowed = {
+		original_tag = KPR
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = KOR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = PRC }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = PRC
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PRC"
+		value = 100
+	}
+}
+
+Korea_dictatorship = {
+	allowed = {
+		original_tag = KOR
+	}
+	
+	enable = {
+		country_exists = KPR
+	}
+	
+	abort = {
+		NOT = { country_exists = KPR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KPR"
+		value = 250
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = 150
+	}
+	ai_strategy = {
+		type = support
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RAJ"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KPR"
+		value = 15
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PRC"
+		value = 5
+	}
+}
+
+Korea_dictatorship_befriend = {
+	allowed = {
+		original_tag = KOR
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = KPR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = KPR }
+			has_political_power < 35
+			and = {
+				ROOT = {
+					has_opinion	= {
+						target = JAP
+						value > 80
+					}
+				}
+				ROOT = {
+					has_opinion	= {
+						target = USA
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 100
+	}
+}

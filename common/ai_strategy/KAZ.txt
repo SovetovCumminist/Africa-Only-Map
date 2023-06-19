@@ -1,0 +1,343 @@
+new_KAZ_ally = {
+	allowed = {
+		or = {
+			original_tag = PER
+			original_tag = IRQ
+			original_tag = AFG
+			original_tag = TLB
+			original_tag = PAK
+		}
+	}
+	
+	enable = {
+		KAZ = { has_completed_focus = KAZ_new_friends }
+	}
+	
+	abort = {
+		NOT = { country_exists = KAZ }
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "KAZ"
+		value = 300
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = -50
+	}
+	ai_strategy = {
+		type = support
+		id = "KAZ"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KAZ"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 10
+	}
+	ai_strategy = {
+		type = befriend
+		id = "RUS"
+		value = -10
+	}
+}
+
+KAZ_not_scary = {
+	allowed = {
+		or = {
+			original_tag = RUS
+			original_tag = PRC
+			original_tag = BLR
+		}
+	}
+	
+	enable = {
+		KAZ = { has_country_flag = RUS_PRC_satisfied_with_KAZ_actions }
+	}
+	
+	abort = {
+		KAZ = { has_completed_focus = KAZ_cooperation_with_NATO }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = -15
+	}
+	ai_strategy = {
+		type = contain
+		id = "KAZ"
+		value = -10
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KAZ"
+		value = -5
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "KAZ"
+		value = -25
+	}
+}
+
+KAZ_politic = {
+	allowed = {
+		original_tag = KAZ
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+	}
+	
+	#Уважает за борьбу с сепаратизмом
+	ai_strategy = {
+		type = support
+		id = "UKR"
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "AZR"
+		value = 25
+	}
+	#Нейтральная внешняя политика+боится России
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = -15
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = -5
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = -5
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PER"
+		value = -5
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = -5
+	}
+	#Очень боится сепаратизма и будет его подавлять
+	ai_strategy = {
+        type = invade
+        id = "KKP"
+        value = 200
+    }
+	ai_strategy = {
+        type = invade
+        id = "RUL"
+        value = 200
+    }
+}
+
+Russia_separatists_KAZ = {
+	allowed = {
+		original_tag = KAZ
+	}
+	
+	enable = {
+		country_exists = RUL
+	}
+	
+	abort = {
+		NOT = { country_exists = RUL }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "RUL"
+		value = 300
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 150
+	}
+	ai_strategy = {
+		type = conquer
+		id = "RUL"
+		value = 250
+	}
+}
+
+Russia_separatists_KAZ_ally = {
+	allowed = {
+		or = {
+			original_tag = UKR
+			original_tag = GEO
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+			original_tag = POL
+			original_tag = TMS
+			original_tag = UZB
+			original_tag = KYR
+			original_tag = KAZ
+			original_tag = TAJ
+			original_tag = AZR
+			original_tag = TUR
+			original_tag = AFG
+			original_tag = TLB
+			original_tag = PER
+		}
+	}
+	
+	enable = {
+		country_exists = RUL
+	}
+	
+	abort = {
+		NOT = { country_exists = RUL }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "KAZ"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KAZ"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUL"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "RUL"
+		value = -150
+	}
+}
+
+Russia_separatists_RUL_ally = {
+	allowed = {
+		or = {
+			original_tag = RUS
+			original_tag = SER
+			original_tag = DNR
+			original_tag = LNR
+			original_tag = BLR
+			original_tag = PNS
+			original_tag = SRP
+			original_tag = MNT
+			original_tag = PRC
+		}
+	}
+	
+	enable = {
+		country_exists = RUL
+	}
+	
+	abort = {
+		NOT = { country_exists = RUL }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "RUL"
+		value = 1450
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RUL"
+		value = 1300
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = 15
+	}
+	ai_strategy = {
+		type = befriend
+		id = "KAZ"
+		value = -15
+	}
+}
+
+Russia_separatists_RUS = {
+	allowed = {
+		original_tag = RUS
+	}
+	
+	enable = {
+		country_exists = RUL
+	}
+	
+	abort = {
+		NOT = { country_exists = RUL }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = 15
+	}
+	ai_strategy = {
+		type = support
+		id = "RUL"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RUL"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KAZ"
+		value = 5
+	}
+}
+
+Russia_befriend_with_separatists = {
+	allowed = {
+		original_tag = RUS
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = RUL
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = RUL }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = RUL
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "RUL"
+		value = 100
+	}
+}

@@ -1,0 +1,571 @@
+NATO = {
+	enable = {
+		has_idea = NATO_member
+	}
+	
+	abort = {
+		has_offensive_war = yes
+	}
+	
+	ai_strategy = {
+		type = befriend
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		target = PREV		
+		value = 600
+	}
+	ai_strategy = {
+		type = support
+		target = PREV		
+		value = 600
+	}
+	ai_strategy = {
+		type = protect
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = alliance
+		target = PREV			
+		value = 600
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		target = PREV
+		target = guarantee
+		value = 600
+	}
+}
+
+no_one_will_die_for_Baltic = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+		date > 2024.01.01
+	}
+	
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = EST
+		value = 200
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = LAT
+		value = 200
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = LIT
+		value = 200
+	}
+}
+
+Why_die_for_Ukraine = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+		date > 2024.01.01
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "RUS"
+		value = -400
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "UKR"
+		value = -2000
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "UKR"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "UKR"
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = UKR
+		value = 100
+	}
+}
+
+Why_die_for_LDNR = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = DNR
+			country_exists = LNR
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "UKR"
+		value = -400
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "DNR"
+		value = -2000
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "DNR"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "DNR"
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "DNR"
+		value = -100
+	}
+	ai_strategy = {
+		type = support
+		id = "DNR"
+		value = -999
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "LNR"
+		value = -2000
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "LNR"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "LNR"
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "LNR"
+		value = -100
+	}
+	ai_strategy = {
+		type = support
+		id = "LNR"
+		value = -999
+	}
+}
+
+GER_NAZI_NOW = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		GER = { ROOT_is_fascism_regime = yes }
+	}
+	
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = -1200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = -1200
+	}
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = -1200
+	}
+	ai_strategy = {
+		type = protect
+		id = "GER"
+		value = -1200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = -1200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "GER"
+		target = guarantee
+		value = -1200
+	}
+}
+
+ITA_NAZI_NOW = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		ITA = { ROOT_is_fascism_regime = yes }
+	}
+	
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ITA"
+		value = -400
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ITA"
+		value = -400
+	}
+	ai_strategy = {
+		type = support
+		id = "ITA"
+		value = -400
+	}
+	ai_strategy = {
+		type = protect
+		id = "ITA"
+		value = -400
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ITA"
+		value = -400
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "ITA"
+		target = guarantee
+		value = -400
+	}
+}
+
+JAP_NAZI_NOW = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		JAP = { ROOT_is_fascism_regime = yes }
+	}
+	
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "JAP"
+		value = -100
+	}
+	ai_strategy = {
+		type = support
+		id = "JAP"
+		value = -100
+	}
+	ai_strategy = {
+		type = protect
+		id = "JAP"
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -100
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "JAP"
+		target = guarantee
+		value = -100
+	}
+}
+
+GER_COMMIE_NOW = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		GER = { ROOT_is_leftist_regime = yes }
+	}
+	
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = -600
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = -600
+	}
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = -600
+	}
+	ai_strategy = {
+		type = protect
+		id = "GER"
+		value = -600
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = -600
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "GER"
+		target = guarantee
+		value = -600
+	}
+}
+
+NATO_hate_Cuba = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		CUB = { ROOT_is_leftist_regime = yes }
+	}
+	
+	abort = {
+		CUB = { ROOT_is_leftist_regime = no }
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "CUB"
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "CUB"
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "CUB"
+		value = 5
+	}
+	ai_strategy = {
+		type = protect
+		id = "CUB"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "CUB"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "CUB"
+		value = -999
+	}
+}
+
+NATO_love_Taiwan = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		CHI = { ROOT_is_democratic_regime = yes }
+	}
+	
+	abort = {
+		not = { CHI = { ROOT_is_democratic_regime = yes } }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "CHI"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CHI"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "CHI"
+		value = 100
+	}
+	ai_strategy = {
+		type = protect
+		id = "CHI"
+		value = 10
+	}
+}
+
+NATO_hate_PRC = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		PRC = { ROOT_is_leftist_regime = yes }
+	}
+	
+	abort = {
+		PRC = { ROOT_is_leftist_regime = no }
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = "PRC"
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRC"
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "PRC"
+		value = 5
+	}
+	ai_strategy = {
+		type = protect
+		id = "PRC"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PRC"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "PRC"
+		value = -999
+	}
+}
+
+NATO_not_love_USA = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		RUS = { has_idea = ODKB_member }
+	}
+	
+	abort = {
+		NOT = { RUS = { has_idea = ODKB_member } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "RUS"
+		value = -250
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RUS"
+		value = -250
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "RUS"
+		value = -250
+	}
+}
+
+NATO_not_love_BLR = {
+	allowed = {
+		has_idea = NATO_member
+	}
+	
+	enable = {
+		BLR = { has_idea = ODKB_member }
+	}
+	
+	abort = {
+		NOT = { BLR = { has_idea = ODKB_member } }
+	}
+	
+	ai_strategy = {
+		type = support
+		id = "BLR"
+		value = -150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "BLR"
+		value = -150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "BLR"
+		value = 50
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BLR"
+		value = -150
+	}
+}

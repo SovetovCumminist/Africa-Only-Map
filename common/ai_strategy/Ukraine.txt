@@ -1,0 +1,539 @@
+UKS_war_UKR = {
+	allowed = {
+		original_tag = UKS
+	}
+	
+	enable = {
+		country_exists = UKR
+	}
+	
+	abort = {
+		NOT = { country_exists = UKR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 25000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "UKR"
+		value = 35000
+	}
+}
+
+UKS_war_UKH = {
+	allowed = {
+		original_tag = UKS
+	}
+	
+	enable = {
+		country_exists = UKH
+	}
+	
+	abort = {
+		NOT = { country_exists = UKH }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKH"
+		value = 25000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "UKH"
+		value = 35000
+	}
+}
+
+HUN_help_UKH = {
+	allowed = {
+		original_tag = UKS
+	}
+	
+	enable = {
+		country_exists = UKH
+	}
+	
+	abort = {
+		NOT = { country_exists = UKH }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKH"
+		value = 25000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "UKH"
+		value = 35000
+	}
+}
+
+UKS_war_DNR = {
+	allowed = {
+		original_tag = UKS
+	}
+	
+	enable = {
+		country_exists = DNR
+	}
+	
+	abort = {
+		NOT = { country_exists = DNR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 25000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "DNR"
+		value = 35000
+	}
+}
+
+UKS_war_LNR = {
+	allowed = {
+		original_tag = UKS
+	}
+	
+	enable = {
+		country_exists = LNR
+	}
+	
+	abort = {
+		NOT = { country_exists = LNR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 25000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "LNR"
+		value = 35000
+	}
+}
+
+
+UKR_war_DNR = {
+	allowed = {
+		original_tag = UKR
+	}
+	
+	enable = {
+		country_exists = DNR
+	}
+	
+	abort = {
+		NOT = { country_exists = DNR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 500
+	}
+	ai_strategy = {
+		type = conquer
+		id = "DNR"
+		value = 350
+	}
+}
+
+UKR_war_LNR = {
+	allowed = {
+		original_tag = UKR
+	}
+	
+	enable = {
+		country_exists = LNR
+	}
+	
+	abort = {
+		NOT = { country_exists = LNR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 500
+	}
+	ai_strategy = {
+		type = conquer
+		id = "LNR"
+		value = 350
+	}
+}
+
+Ukraine = {
+	allowed = {
+		ROOT_is_true_democratic_regime = yes
+	}
+	
+	enable = {
+		is_major = yes
+		UKR = { ROOT_is_true_democratic_regime = yes }
+		NOT = { RUS = { ROOT_is_true_democratic_regime = yes } }
+		or = {
+			country_exists = DNR
+			country_exists = LNR
+		}
+	}
+	
+	abort = {
+		or = {
+			NOT = { UKR = { ROOT_is_true_democratic_regime = yes } }
+			RUS = { ROOT_is_true_democratic_regime = yes }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 15
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "UKR"
+		value = 20
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKR"
+		value = 10
+	}
+}
+
+Ukraine_befriend = {
+	allowed = {
+		ROOT_is_true_democratic_regime = yes
+	}
+	
+	enable = {
+		is_major = yes
+		has_political_power > 155
+		UKR = { ROOT_is_true_democratic_regime = yes }
+	}
+	
+	abort = {
+		or = {
+			NOT = { UKR = { ROOT_is_true_democratic_regime = yes } }
+			NOT = { country_exists = UKR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = UKR
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UKR"
+		value = 5
+	}
+}
+
+Ukraine_minsk1 = {
+	allowed = {
+		original_tag = UKR
+	}
+	
+	enable = {
+		or = {
+			country_exists = DNR
+			country_exists = LNR
+		}
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = DNR
+			country_exists = LNR
+		}
+	}
+	#ai_strategy = {
+	#	type = prepare_for_war
+	#	id = "RUS"
+	#	value = 500
+	#}
+	#ai_strategy = {
+	#	type = prepare_for_war
+	#	id = "DNR"
+	#	value = 500
+	#}
+	#ai_strategy = {
+	#	type = prepare_for_war
+	#	id = "LNR"
+	#	value = 500
+	#}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "DSY"
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"
+		value = 100
+	}
+}
+
+Ukraine_minsk1_befriend = {
+	allowed = {
+		original_tag = UKR
+	}
+	
+	enable = {
+		has_political_power > 155
+		ROOT_is_true_democratic_regime = yes
+		USA = { ROOT_is_true_democratic_regime = yes }
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = USA }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = USA
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 100
+	}
+}
+
+Ukraine_minsk2 = {
+	allowed = {
+		is_pr_in_ukraine = yes
+	}
+	
+	enable = {
+		UKR = { ROOT_is_true_democratic_regime = yes }
+	}
+	
+	abort = {
+		NOT = { country_exists = UKR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 300
+	}
+	ai_strategy = {
+		type = support
+		id = "SYR"
+		value = 5
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SYR"
+		value = 5
+	}
+}
+
+Ukraine_minsk2_befriend = {
+	allowed = {
+		is_pr_in_ukraine = yes
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = UKR
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = RUS }
+			has_political_power < 35
+			or = {
+				ROOT = {
+					has_opinion	= {
+						target = RUS
+						value > 80
+					}
+				}
+				ROOT = {
+					has_opinion	= {
+						target = BLR
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "RUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BLR"
+		value = 100
+	}
+}
+
+Ukr_civil_war = {
+	allowed = {
+		or = {
+			original_tag = LAT
+			original_tag = EST
+			original_tag = LIT
+			original_tag = CRO
+		}
+	}
+	
+	enable = {
+		country_exists = UKS
+	}
+	
+	abort = {
+		OR = {
+			NOT = { country_exists = UKS }
+			NOT = { country_exists = UKR }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 150
+	}
+	ai_strategy = {
+		type = support
+		id = "UKS"
+		value = 300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKS"
+		value = 300
+	}
+}
+
+Ukr_civil_war_befriend = {
+	allowed = {
+		or = {
+			original_tag = POL
+			original_tag = HUN
+			original_tag = LAT
+			original_tag = EST
+			original_tag = LIT
+			original_tag = CRO
+		}
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = UKS
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = UKS }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = UKS
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UKS"
+		value = 100
+	}
+}
+
+Mac_nationalist_war = {
+	allowed = {
+		or = {
+			original_tag = UKR
+			original_tag = UKS
+		}
+	}
+
+	enable = {
+		ROOT_is_fascism_regime = yes
+		MAC = { ROOT_is_fascism_regime = yes }
+	}
+	
+	abort = {
+		NOT = { country_exists = MAC }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "MAC"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "MAC"
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MAC"
+		value = 300
+	}
+}

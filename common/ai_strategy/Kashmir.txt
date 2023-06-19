@@ -1,0 +1,186 @@
+China = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		country_exists = RAJ
+	}
+	
+	abort = {
+		owns_state = 833
+		owns_state = 787
+		owns_state = 441
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "PAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PAK"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "RAJ"
+		value = 25
+	}
+}
+
+China_befriend = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		has_political_power > 155
+		country_exists = RAJ
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = PAK }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = PAK
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PAK"
+		value = 100
+	}
+}
+
+Not_True_China = {
+	allowed = {
+		original_tag = CHI
+	}
+	
+	enable = {
+		is_major = yes
+		country_exists = RAJ
+	}
+	
+	abort = {
+		owns_state = 833
+		owns_state = 787
+		owns_state = 441
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "PAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PAK"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "RAJ"
+		value = 25
+	}
+}
+
+Not_True_China_befriend = {
+	allowed = {
+		original_tag = CHI
+	}
+	
+	enable = {
+		has_political_power > 155
+		is_major = yes
+		country_exists = RAJ
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = PAK }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = PAK
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "PAK"
+		value = 100
+	}
+}
+
+India = {
+	allowed = {
+		original_tag = RAJ
+	}
+	
+	enable = {
+		NOT = {
+			owns_state = 833
+			owns_state = 787
+			owns_state = 441
+		}
+	}
+	
+	abort = {
+		owns_state = 833
+		owns_state = 787
+		owns_state = 441
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = 50
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PRC"
+		value = 25
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PRC"
+		value = 5
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PAK"
+		value = 40
+	}
+}

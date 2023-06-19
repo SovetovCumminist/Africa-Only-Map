@@ -1,0 +1,109 @@
+befriend_with_kpr = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		has_political_power > 155
+		ROOT_is_communism_regime = yes
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = KPR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = KPR
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "KPR"
+		value = 100
+	}
+}
+
+befriend_with_kpr = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		has_political_power > 155
+		ROOT_is_communism_regime = yes
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = KYR }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = KYR
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "KYR"
+		value = 100
+	}
+}
+
+Build_better_world_chi = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		country_exists = CHI
+	}
+	
+	abort = {
+		NOT = { country_exists = SIK }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "CHI"
+		value = 30
+	}
+}
+
+Build_better_world_sik = {
+	allowed = {
+		original_tag = PRC
+	}
+	
+	enable = {
+		country_exists = SIK
+	}
+	
+	abort = {
+		NOT = { country_exists = SIK }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SIK"
+		value = 2000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SIK"
+		value = 1000
+	}
+}

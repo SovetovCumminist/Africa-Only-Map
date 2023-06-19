@@ -1,0 +1,134 @@
+NATO = {
+	allowed = { has_idea = NATO_member }
+	
+	enable = {
+		country_exists = AFG
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = AFG
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "TLB"
+		value = 15
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TLB"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "AFG"
+		value = 20
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AFG"
+		value = 10
+	}
+}
+
+USA_in_AFG = {
+	allowed = {
+		original_tag = USA
+	}
+	
+	enable = {
+		country_exists = AFG
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = AFG
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "TLB"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TLB"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "AFG"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AFG"
+		value = 50
+	}
+}
+
+Taliban_friends = {
+	allowed = {
+		or = {
+			original_tag = PAK
+			original_tag = SAU
+		}
+	}
+	
+	enable = {
+		country_exists = TLB
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = TLB
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "AFG"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "TLB"
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "TLB"
+		value = 200
+	}
+}
+
+NATO_befriend = {
+	allowed = { has_idea = NATO_member }
+	
+	enable = {
+		has_political_power > 155
+		AFG = { has_war_with = TLB }
+	}
+	
+	abort = {
+		or = {
+			NOT = { country_exists = TLB }
+			has_political_power < 35
+			ROOT = {
+				has_opinion	= {
+					target = AFG
+					value > 80
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "AFG"
+		value = 25
+	}
+}
