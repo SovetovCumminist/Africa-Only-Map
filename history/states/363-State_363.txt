@@ -1,8 +1,16 @@
 state={
 	id=363
 	name="STATE_363"
+	history={
+		owner = KEN
+		victory_points = { 880 15 }
+		buildings = {
+
+		}
+		add_core_of = KEN
+	}
 	provinces={
-		711 712 
+		880
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

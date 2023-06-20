@@ -1,0 +1,18 @@
+state={
+	id=503
+	name="STATE_503"
+	history={
+		owner = KEN
+		#victory_points = { 9620 15 }
+		#victory_points = { 663 10 }
+		buildings = {
+
+		}
+		add_core_of = KEN
+	}
+	provinces={
+		877 878 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+}

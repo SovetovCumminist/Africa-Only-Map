@@ -1,8 +1,17 @@
 state={
 	id=300
 	name="STATE_300"
+	history={
+		owner = KEN
+		#victory_points = { 883 3 }
+		#victory_points = { 884 1 }
+		buildings = {
+
+		}
+		add_core_of = KEN
+	}
 	provinces={
-		516 530 
+		383 516 530 883 884
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
