@@ -884,3 +884,7 @@
 883;44;25;155;land;false;plains;1
 884;60;255;8;land;false;plains;1
 885;48;150;145;land;false;plains;1
+886;220;220;220;land;false;desert;1
+887;225;225;225;land;true;plains;1
+888;200;67;253;land;true;plains;1
+889;201;67;253;land;true;plains;1
