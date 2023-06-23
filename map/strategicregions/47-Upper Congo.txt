@@ -1,9 +1,9 @@
 
 strategic_region={
-	id=27
-	name="STRATEGICREGION_27"
+	id=47
+	name="STRATEGICREGION_47"
 	provinces={
-		84 114 217 668 669 670 671 672 675 676 677 678 679 680 682 684 685
+		20 31 58 60 128 168 203 247 263 300 347 381 623
 	}
 	weather={
 		period={
