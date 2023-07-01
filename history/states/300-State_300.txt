@@ -11,7 +11,7 @@ state={
 		add_core_of = KEN
 	}
 	provinces={
-		383 516 530 883 884
+		383 516 530 721 883 884
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
